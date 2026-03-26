@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2e;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  color: #e0e0e0;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  gap: 32px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 64px;
+}
+
+.player-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #aaa;
+}
+
+.player-label.x { color: #e94f4f; }
+.player-label.o { color: #4f9ee9; }
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Status */
+.status {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ccc;
+  min-height: 1.6em;
+  transition: color 0.2s;
+}
+
+.status.winner {
+  color: #f5d26e;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover:not(:disabled) {
+  background: #1e3a5f;
+  transform: scale(1.05);
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cell.x {
+  color: #e94f4f;
+}
+
+.cell.o {
+  color: #4f9ee9;
+}
+
+.cell.winning {
+  background: #2a2a00;
+  border-color: #f5d26e;
+}
+
+/* Reset button */
+.btn-reset {
+  padding: 10px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #0f3460;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-reset:hover {
+  background: #1a5276;
+  transform: scale(1.03);
+}

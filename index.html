@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="scoreboard">
+      <div class="score" id="score-x">
+        <span class="player-label x">X</span>
+        <span class="score-value" id="x-wins">0</span>
+      </div>
+      <div class="score draws">
+        <span class="player-label">Draws</span>
+        <span class="score-value" id="draws">0</span>
+      </div>
+      <div class="score" id="score-o">
+        <span class="player-label o">O</span>
+        <span class="score-value" id="o-wins">0</span>
+      </div>
+    </div>
+
+    <div class="status" id="status">Player X's turn</div>
+
+    <div class="board" id="board">
+      <button class="cell" data-index="0"></button>
+      <button class="cell" data-index="1"></button>
+      <button class="cell" data-index="2"></button>
+      <button class="cell" data-index="3"></button>
+      <button class="cell" data-index="4"></button>
+      <button class="cell" data-index="5"></button>
+      <button class="cell" data-index="6"></button>
+      <button class="cell" data-index="7"></button>
+      <button class="cell" data-index="8"></button>
+    </div>
+
+    <button class="btn-reset" id="reset">New Game</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

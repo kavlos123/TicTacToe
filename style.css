@@ -140,3 +140,21 @@ h1 {
   background: #1a5276;
   transform: scale(1.03);
 }
+
+.btn-music {
+  padding: 8px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #2d1b4e;
+  color: #c9a0ff;
+  border: 2px solid #7b2fff;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-music:hover {
+  background: #3d2060;
+  transform: scale(1.03);
+}
